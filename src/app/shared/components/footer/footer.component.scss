@@ -1,0 +1,8 @@
+.listStNo{
+    list-style: none;
+}
+.langList{
+    li::marker{
+        color: #302CA2;
+    }
+}

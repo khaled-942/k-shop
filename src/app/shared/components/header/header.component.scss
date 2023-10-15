@@ -1,0 +1,24 @@
+input::placeholder {
+    text-align: right;
+    color: #302CA2;
+}
+
+.dropdown-toggle.customize {
+    &::before {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
+    &::after{
+        content: unset;
+    }
+}
+.active{
+    border-right: 1px solid #302CA2;
+    background-color: rgba(48, 44, 162, 0.1);
+}

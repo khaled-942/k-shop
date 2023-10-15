@@ -1,1 +1,62 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg bg-body-transparent">
+    <div class="container-fluid flex-row-reverse">
+        <a class="navbar-brand" routerLink="Home">
+            <img src="../../../../assets/images/logo.svg" alt="k-shop-logo" srcset="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav gap-2">
+                <li class="nav-item">
+                    <button class="btn custom-bg text-color w-mc" routerLink="cart">
+                        <i class="bi bi-cart-fill"></i> سله التسوق
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn custom-bg" routerLink="profile">
+                        <i class="bi bi-person-fill text-color"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <nav class="navbar w-100">
+                <form class="container-fluid">
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control rounded-pill custom-bg text-color" placeholder='عم تبحث ؟'
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </form>
+            </nav>
+        </div>
+    </div>
+</nav>
+<div class="custom-bg">
+    <ul class="nav justify-content-start flex-row-reverse">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle customize text-color" data-bs-toggle="dropdown" role="button"
+                aria-expanded="false">الاقسام</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-color">الكترونيات</a></li>
+                <li><a class="dropdown-item text-color">ملابس</a></li>
+            </ul>
+        </li>
+        <li class="nav-item pointer" routerLink="Home" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link text-color" aria-current="page">الرئيسية</a>
+        </li>
+        <li class="nav-item pointer" routerLink="wishList" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link text-color">قائمة الامنيات</a>
+        </li>
+        <li class="nav-item pointer" routerLink="contact" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link text-color">تواصل معنا</a>
+        </li>
+        <li class="nav-item pointer" routerLink="aboutUs" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link text-color">من نحن</a>
+        </li>
+    </ul>
+</div>
