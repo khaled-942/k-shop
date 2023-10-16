@@ -1,11 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
-.pointer{
+@font-face {
+    font-family: 'cairo';
+    src: url('assets/fonts/Cairo-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'cairo';
+}
+
+.pointer {
     cursor: pointer;
 }
-.active{
+
+.active {
     font-weight: bold;
 }
-.custom-bg {
+
+.custom-bg,
+.custom-bg:hover {
     background-color: rgba(48, 44, 162, 0.08);
 }
 
@@ -13,6 +27,21 @@
     color: #302CA2;
 }
 
+.border-color {
+    border-color: #302CA2;
+
+    &:hover,
+    :active {
+        background-color: #302CA2 !important;
+        border-color: #302CA2 !important;
+        color: white !important;
+    }
+}
+
 .w-mc {
     width: max-content;
+}
+
+.btn {
+    font-weight: bold;
 }

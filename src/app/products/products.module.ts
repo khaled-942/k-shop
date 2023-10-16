@@ -6,6 +6,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductsHomeComponent } from './products-home/products-home.component';
+import { ProductViewComponent } from './product-view/product-view.component';
+import { PRecentViewComponent } from './product-view/p-recent-view/p-recent-view.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { ProductsHomeComponent } from './products-home/products-home.component';
     ProductListComponent,
     ProductItemComponent,
     ProductDetailsComponent,
-    ProductsHomeComponent
+    ProductsHomeComponent,
+    ProductViewComponent,
+    PRecentViewComponent
   ],
   imports: [
     CommonModule,
