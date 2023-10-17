@@ -1,1 +1,24 @@
-<p>product-details works!</p>
+<div class="col pointer">
+    <div class="card h-100 position-relative text-end">
+        <div>
+            <button class="btn custom-btn w-mc position-absolute rounded-pill mt-2 ms-2 fs-6">
+                {{ product.status }}
+            </button>
+            <img [src]="product.imgSrc" class="card-img-top pt-3" alt="..." />
+            <div class="card-body pb-0">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <ngb-rating [(rate)]="product.rating" class="flex-row-reverse">
+                    <ng-template let-fill="fill" let-index="index">
+                        <i class="text-warning bi-star{{ fill === 100 ? '-fill' : '' }}"></i>
+                    </ng-template>
+                </ngb-rating>
+                <p class="card-text">{{ product.price }}</p>
+            </div>
+        </div>
+        <div class="d-flex my-2 gap-2 align-items-center justify-content-evenly">
+            <i class="bi bi-heart pointer"></i>
+            <i class="bi bi-share pointer"></i>
+            <button class="btn custom-btn w-mc">أضف للسلة</button>
+        </div>
+    </div>
+</div>

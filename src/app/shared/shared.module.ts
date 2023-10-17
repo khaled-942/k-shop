@@ -4,7 +4,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppRoutingModule } from '../app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   exports:[
     FooterComponent,

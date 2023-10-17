@@ -1,8 +1,11 @@
 <div class="px-2">
     <div class="d-flex gap-3">
-        <button class="btn btn-outline-info text-color border-color w-mc">عرض الكل</button>
+        <button class="btn btn-outline-info text-color border-color w-mc fw-bold">عرض الكل</button>
         <hr class="flex-grow-1">
         <p class="w-mc">وصل حديثا</p>
     </div>
-    <app-product-item></app-product-item>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 py-3">
+        <app-product-item *ngFor="let product of products" [passProduct]="product"></app-product-item>
+    </div>
+
 </div>

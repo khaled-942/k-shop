@@ -8,7 +8,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductsHomeComponent } from './products-home/products-home.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { PRecentViewComponent } from './product-view/p-recent-view/p-recent-view.component';
-
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { PRecentViewComponent } from './product-view/p-recent-view/p-recent-view
   ],
   imports: [
     CommonModule,
+    NgbRatingModule,
     ProductsRoutingModule
   ]
 })

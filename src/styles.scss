@@ -22,6 +22,13 @@
 .custom-bg:hover {
     background-color: rgba(48, 44, 162, 0.08);
 }
+.custom-btn,
+.custom-btn:hover,
+.custom-btn:active {
+    background-color: #302ca2 !important;
+    color: white !important;
+    border: #302ca2 !important;
+}
 
 .text-color {
     color: #302CA2;
@@ -40,8 +47,4 @@
 
 .w-mc {
     width: max-content;
-}
-
-.btn {
-    font-weight: bold;
 }

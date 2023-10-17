@@ -1,0 +1,40 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "price": 90,
+            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "imgSrc": "assets/images/samsung.png",
+            "discount": 0,
+            "status": "جديد",
+            "rating": 2
+        },
+        {
+            "id": 2,
+            "price": 90,
+            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "imgSrc": "assets/images/oppo.png",
+            "discount": 0,
+            "status": "جديد",
+            "rating": 3
+        },
+        {
+            "id": 3,
+            "price": 90,
+            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "imgSrc": "assets/images/tshirt.png",
+            "discount": 0,
+            "status": "جديد",
+            "rating": 4
+        },
+        {
+            "id": 4,
+            "price": 90,
+            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "imgSrc": "assets/images/pic.png",
+            "discount": 0,
+            "status": "جديد",
+            "rating": 5
+        }
+    ]
+}

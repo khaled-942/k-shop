@@ -6,14 +6,14 @@ import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   { path: '', component: NotFoundComponent },
-  { path: 'Home', loadChildren:()=> import('./products/products.module').then(m => m.ProductsModule) },
+  { path: 'Products', loadChildren:()=> import('./products/products.module').then(m => m.ProductsModule) },
   { path: 'wishList',loadChildren:()=> import('./wish-list/wish-list.module').then(m => m.WishListModule) },
   { path: 'contact', component: ContactUsComponent },
   { path: 'aboutUs', component: AboutUsComponent },
   { path: 'cart', loadChildren: () => import('./shopping/shopping.module').then(m => m.ShoppingModule) },
   { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)  },
   { path: 'Not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: 'Not-found' },
+  // { path: '**', redirectTo: 'Not-found' },
 ];
 
 @NgModule({
