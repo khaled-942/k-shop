@@ -1,4 +1,6 @@
 <div class="px-2">
     <p>منتجات تصفحتها مؤخرا</p>
-    <app-p-recent-view></app-p-recent-view>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-1">
+        <app-p-recent-view *ngFor="let vproduct of vproducts" [otherproducts]="vproduct"></app-p-recent-view>
+    </div>
 </div>

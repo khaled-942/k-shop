@@ -1,24 +1,80 @@
-<div class="col pointer">
-    <div class="card h-100 position-relative text-end">
-        <div>
-            <button class="btn custom-btn w-mc position-absolute rounded-pill mt-2 ms-2 fs-6">
-                {{ product.status }}
-            </button>
-            <img [src]="product.imgSrc" class="card-img-top pt-3" alt="..." />
-            <div class="card-body pb-0">
-                <h5 class="card-title">{{ product.title }}</h5>
-                <ngb-rating [(rate)]="product.rating" class="flex-row-reverse">
-                    <ng-template let-fill="fill" let-index="index">
-                        <i class="text-warning bi-star{{ fill === 100 ? '-fill' : '' }}"></i>
-                    </ng-template>
-                </ngb-rating>
-                <p class="card-text">{{ product.price }}</p>
+<div class="px-3 my-4 d-flex flex-column gap-3">
+    <div class="row d-flex align-items-start justify-content-evenly py-3 text-end">
+        <figure class="col-2 pt-3 sticky-top">
+            <img [src]="product.imgSrc" class="img-fluid">
+        </figure>
+        <div class="col-5 d-flex flex-column gap-3 ">
+            <h5> {{product.title}} </h5>
+            <p>{{product.discription}}</p>
+            <p>{{product.price}}</p>
+            <p-divider align="left">
+                <div class="inline-flex align-items-center text-color">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    <b>Info</b>
+                </div>
+            </p-divider>
+            <div class="info text-start">
+                <p>Color: {{product.discription}}</p>
+                <p>Matrial: {{product.price}}</p>
+                <p>Brand Name: {{product.discription}}</p>
+                <p>Age Range: {{product.price}}</p>
+            </div>
+            <p-divider align="left">
+                <div class="inline-flex align-items-center text-color">
+                    <i class="bi bi-bootstrap-reboot me-2"></i>
+                    <b>Return & Policy</b>
+                </div>
+            </p-divider>
+            <div class="return d-flex justify-content-between">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-credit-card"></i>
+                    <span>Card Payment Only</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-bootstrap-reboot"></i>
+                    <span>Returns Policy</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-shield-lock"></i>
+                    <span>Secure transaction</span>
+                </div>
             </div>
         </div>
-        <div class="d-flex my-2 gap-2 align-items-center justify-content-evenly">
-            <i class="bi bi-heart pointer"></i>
-            <i class="bi bi-share pointer"></i>
-            <button class="btn custom-btn w-mc">أضف للسلة</button>
+        <div class="card col-2">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Alex</option>
+                        <option value="1">Cairo</option>
+                        <option value="2">Giza</option>
+                    </select>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex my-2 gap-2 align-items-center justify-content-evenly">
+                        <i class="bi bi-heart pointer"></i>
+                        <i class="bi bi-share pointer"></i>
+                        <button class="btn custom-btn w-mc">أضف للسلة</button>
+                    </div>
+                </li>
+            </ul>
         </div>
+    </div>
+    <p-divider align="left">
+        <div class="inline-flex align-items-center text-color">
+            <i class="bi bi-minecart-loaded me-2"></i>
+            <b>Other Products</b>
+        </div>
+    </p-divider>
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center">
+        <app-p-recent-view *ngFor="let vproduct of otherProducts" [otherproducts]="vproduct"></app-p-recent-view>
+    </div>
+    <p-divider align="left">
+        <div class="inline-flex align-items-center text-color">
+            <i class="bi bi-chat-square-heart-fill me-2"></i>
+            <b>Rates & Comments</b>
+        </div>
+    </p-divider>
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 justify-content-center">
+        <app-rates *ngFor="let rate of [1,1,1,1]" class=" d-flex justify-content-center w-fit"></app-rates>
     </div>
 </div>

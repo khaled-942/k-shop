@@ -1,17 +1,13 @@
 <div class="col pointer">
     <div class="card h-100 position-relative text-end">
+        <p-tag [value]="passProduct.status" [styleClass]="'start-0 custom-btn w-mc position-absolute mt-2 ms-2'"
+            [rounded]="true"></p-tag>
+        <div class="position-absolute end-0 mt-2 me-2"><i class="bi bi-arrow-left-right"></i></div>
         <div (click)="productDetail()">
-            <button class="btn custom-btn w-mc position-absolute rounded-pill mt-2 ms-2 fs-6">
-                {{ passProduct.status }}
-            </button>
             <img [src]="passProduct.imgSrc" class="card-img-top pt-3" alt="..." />
             <div class="card-body pb-0">
                 <h5 class="card-title">{{ passProduct.title }}</h5>
-                <ngb-rating [(rate)]="passProduct.rating" class="flex-row-reverse">
-                    <ng-template let-fill="fill" let-index="index">
-                        <i class="text-warning bi-star{{ fill === 100 ? '-fill' : '' }}"></i>
-                    </ng-template>
-                </ngb-rating>
+                <p-rating [(ngModel)]="passProduct.rating" [readonly]="true" [cancel]="false"></p-rating>
                 <p class="card-text">{{ passProduct.price }}</p>
             </div>
         </div>

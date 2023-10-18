@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'cart', loadChildren: () => import('./shopping/shopping.module').then(m => m.ShoppingModule) },
   { path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)  },
   { path: 'Not-found', component: NotFoundComponent },
-  // { path: '**', redirectTo: 'Not-found' },
+  { path: '**', redirectTo: 'Not-found' },
 ];
 
 @NgModule({

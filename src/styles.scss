@@ -48,3 +48,17 @@
 .w-mc {
     width: max-content;
 }
+
+.w-fit{
+    width: fit-content;
+}
+
+//product item 
+
+svg.p-icon.p-rating-icon.p-rating-icon-active{
+    color: rgb(255,193,7) !important;
+}
+
+.p-rating.p-readonly{
+    flex-direction: row-reverse;
+}
