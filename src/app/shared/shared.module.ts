@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     FooterComponent,
     HeaderComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,

@@ -1,16 +1,27 @@
 <div class="col">
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0 align-items-center justify-content-evenly text-end">
-            <div class="col-md-8">
-                <div class="card-body d-flex flex-column justify-content-evenly">
-                    <h5 class="card-title fw-bold">{{otherproducts.title}} </h5>
-                    <p-rating [(ngModel)]="otherproducts.rating" [readonly]="true" [cancel]="false"></p-rating>
-                    <p class="card-text"><small class="text-body-secondary">{{otherproducts.price}}</small></p>
-                </div>
-            </div>
-            <div class="col-md-4 align-items-center justify-content-center d-flex my-2">
-                <img [src]="otherproducts.imgSrc" class="img-fluid rounded-start" alt="...">
-            </div>
+  <div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0 align-items-center justify-content-evenly text-end">
+      <div class="col-md-8">
+        <div class="card-body d-flex flex-column justify-content-evenly">
+          <h6 class="card-title fw-bold">{{otherproducts.title}} </h6>
+          <p-rating [(ngModel)]="otherproducts.rating" [readonly]="true" [cancel]="false"></p-rating>
+          <div class="d-flex gap-2 justify-content-end">
+            <small class="card-text mb-0" dir="rtl"
+              [ngClass]="{'text-decoration-line-through text-danger': otherproducts.discount != 0}">{{otherproducts.price | egycurrency}}</small>
+
+            <small class="card-text text-success" dir="rtl"
+              *ngIf="otherproducts.discount != 0">{{otherproducts.priceAD | egycurrency}}</small>
+          </div>
+          <div class="d-flex gap-2 justify-content-between pt-2">
+            <i class="bi bi-heart pointer"></i>
+            <i class="bi bi-share pointer"></i>
+            <i class="bi bi-cart-plus pointer"></i>
+          </div>
         </div>
+      </div>
+      <div class="col-md-4 align-items-center justify-content-center d-flex my-2">
+        <img [src]="otherproducts.imgSrc" class="img-fluid rounded-start" alt="...">
+      </div>
     </div>
+  </div>
 </div>

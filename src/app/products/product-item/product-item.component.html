@@ -1,20 +1,24 @@
-<div class="col pointer">
-    <div class="card h-100 position-relative text-end">
-        <p-tag [value]="passProduct.status" [styleClass]="'start-0 custom-btn w-mc position-absolute mt-2 ms-2'"
-            [rounded]="true"></p-tag>
-        <div class="position-absolute end-0 mt-2 me-2"><i class="bi bi-arrow-left-right"></i></div>
-        <div (click)="productDetail()">
-            <img [src]="passProduct.imgSrc" class="card-img-top pt-3" alt="..." />
-            <div class="card-body pb-0">
-                <h5 class="card-title">{{ passProduct.title }}</h5>
-                <p-rating [(ngModel)]="passProduct.rating" [readonly]="true" [cancel]="false"></p-rating>
-                <p class="card-text">{{ passProduct.price }}</p>
-            </div>
+<div class="col pointer h-100">
+  <div class="card h-100 position-relative text-end">
+    <p-tag [value]="passProduct.status" [styleClass]="'start-0 custom-btn w-mc position-absolute mt-2 ms-2'"
+      [rounded]="true"></p-tag>
+    <div class="position-absolute end-0 mt-2 me-2"><i class="bi bi-arrow-left-right"></i></div>
+    <div (click)="productDetail()">
+      <img [src]="passProduct.imgSrc" class="card-img-top pt-3" alt="..." />
+      <div class="card-body pb-0">
+        <h5 class="card-title">{{ passProduct.title }}</h5>
+        <p-rating [(ngModel)]="passProduct.rating" [readonly]="true" [cancel]="false"></p-rating>
+        <div class="d-flex gap-2 justify-content-end">
+            <p class="card-text mb-0" dir="rtl" [ngClass]="{'text-decoration-line-through text-danger': passProduct.discount != 0}">
+                {{ passProduct.price | egycurrency }}</p>
+              <p class="card-text text-success" dir="rtl" *ngIf="passProduct.discount != 0">{{ passProduct.priceAD | egycurrency }}</p>
         </div>
-        <div class="d-flex my-2 gap-2 align-items-center justify-content-evenly">
-            <i class="bi bi-heart pointer"></i>
-            <i class="bi bi-share pointer"></i>
-            <button class="btn custom-btn w-mc" (click)="addToCart()">أضف للسلة</button>
-        </div>
+      </div>
     </div>
+    <div class="d-flex my-2 gap-2 align-items-center justify-content-evenly">
+      <i class="bi bi-heart pointer"></i>
+      <i class="bi bi-share pointer"></i>
+      <button class="btn custom-btn w-mc" (click)="addToCart()">أضف للسلة</button>
+    </div>
+  </div>
 </div>

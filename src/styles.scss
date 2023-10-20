@@ -22,6 +22,7 @@
 .custom-bg:hover {
     background-color: rgba(48, 44, 162, 0.08);
 }
+
 .custom-btn,
 .custom-btn:hover,
 .custom-btn:active {
@@ -49,16 +50,16 @@
     width: max-content;
 }
 
-.w-fit{
+.w-fit {
     width: fit-content;
 }
 
 //product item 
 
-svg.p-icon.p-rating-icon.p-rating-icon-active{
-    color: rgb(255,193,7) !important;
+svg.p-icon.p-rating-icon.p-rating-icon-active {
+    color: rgb(255, 193, 7) !important;
 }
 
-.p-rating.p-readonly{
+.p-rating.p-readonly {
     flex-direction: row-reverse;
 }

@@ -1,1 +1,45 @@
-<p>shopping-list works!</p>
+<div class="container">
+  <div *ngIf="products; else empty">
+    <p-dataView #dv [value]="products" [emptyMessage]="' '">
+      <ng-template let-product pTemplate="listItem">
+        <div class="col-12">
+          <div class="d-flex flex-column flex-md-row align-items-center p-4 gap-4">
+            <img class="shadow img-fluid rounded py-2" [src]="product.imgSrc" [alt]="product.title" />
+            <div
+              class="d-flex flex-column flex-md-row justify-content-between align-items-center flex-1 gap-4 flex-grow-1">
+              <div class="d-flex flex-column align-items-center justify-content-center gap-3">
+                <h6 class="fw-bold">{{ product.title }}</h6>
+                <p-rating [(ngModel)]="product.rating" [readonly]="true" [cancel]="false"></p-rating>
+                <div class="d-flex align-items-center gap-3">
+                  <span class="d-flex align-items-center gap-2">
+                    <i class="bi bi-tag"></i>
+                    <span class="fw-semibold">{{ product.category }}</span>
+                  </span>
+                  <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product)"></p-tag>
+                </div>
+              </div>
+              <div class="d-flex flex-column  align-items-center gap-3">
+                <span class="fs-5 fw-semibold">price: {{'$'+ product.price }}</span>
+                <div class="text-center">
+                  <label class="mb-2 fw-bold">Quantity</label>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <i class="bi bi-dash px-2 pointer"></i>
+                    <input type="number" class="form-control text-center" [value]="product.quantity" readonly>
+                    <i class="bi bi-plus px-2 pointer"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataView>
+  </div>
+  <ng-template #empty>
+    <div class="d-flex align-items-center justify-content-center py-5">
+      <figure>
+        <img src="../../../assets/images/empty.png" alt="Empty" srcset="">
+      </figure>
+    </div>
+  </ng-template>
+</div>

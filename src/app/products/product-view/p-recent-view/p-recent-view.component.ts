@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/interfaces/productInterface';
 
 @Component({
@@ -6,6 +6,9 @@ import { Product } from 'src/app/shared/interfaces/productInterface';
   templateUrl: './p-recent-view.component.html',
   styleUrls: ['./p-recent-view.component.scss'],
 })
-export class PRecentViewComponent {
+export class PRecentViewComponent implements OnInit {
   @Input() otherproducts!: Product;
+  ngOnInit(): void {
+    this.otherproducts.priceAD = this.otherproducts.price * (1 - this.otherproducts.discount)
+  }
 }
