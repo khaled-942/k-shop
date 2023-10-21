@@ -22,7 +22,7 @@ export class ProductDetailsComponent implements OnInit {
       this.product = data;
     });
     this.apiServ.getProducts().subscribe((data: any) => {
-      this.otherProducts = data.filter((el:any) => el.id != this.product.id);
+      this.otherProducts = data.filter((el:any) => el.id != this.product.id).slice(0,4);
     });
   }
   addToCart(){

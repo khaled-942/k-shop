@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AccountService } from 'src/app/shared/services/account.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,19 +10,21 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent implements OnInit {
   signUpForm: FormGroup | any
-  constructor(private fb: FormBuilder, private route: Router) { }
+  constructor(private fb: FormBuilder, private route: Router, private account:AccountService) { }
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
-      fname: [null, [Validators.required]],
+      name: [null, [Validators.required]],
       email: [null, [Validators.required,Validators.pattern(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)]],
       uname: [null, [Validators.required]],
-      pass: [null, [Validators.required,Validators.pattern(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/)]],
-      cpass: [null, [Validators.required,Validators.pattern(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/)]],
+      password: [null, [Validators.required,Validators.pattern(/^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/)]],
       formArrayAddress: this.fb.array([null])
     })
   }
   createAccount() {
-    console.log(this.signUpForm)
+    this.account.passInformation(this.signUpForm.value);
+    this.account.changeStatus(true);
+    this.route.navigate(['/profile'])
+    console.log(this.signUpForm.value)
   }
 
   get formControls() {

@@ -1,13 +1,26 @@
 <div class="container py-3">
-    <form [formGroup]="login" (ngSubmit)="submitValue()">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">E-mail</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userName" formControlName="userName">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password" formControlName="password">
-        </div>
-        <button type="submit" class="btn custom-btn w-mc">Log In</button>
-    </form>
+  <form [formGroup]="login" (ngSubmit)="submitValue()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">E-mail</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"
+        formControlName="email">
+      <small *ngIf="controls.email.errors?.required && controls.email.touched" class="text-danger">E-mail
+        is required</small>
+      <small *ngIf="controls.email.errors?.pattern && controls.email.touched" class="text-danger">Not a
+        correct E-mail</small>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password" formControlName="password">
+      <div class="d-flex flex-column gap-2">
+        <small class="text-warning">Password min 6 chars must contain at least 1 number, 1 uppercase and 1
+          lowercase</small>
+        <small *ngIf="controls.password.errors?.required && controls.password.touched" class="text-danger">Password
+          is required</small>
+        <small *ngIf="controls.password.errors?.pattern && controls.password.touched" class="text-danger">Not a
+          correct password</small>
+      </div>
+    </div>
+    <button type="submit" class="btn custom-btn w-100" [disabled]="login.invalid">Log In</button>
+  </form>
 </div>

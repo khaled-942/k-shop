@@ -4,6 +4,7 @@ import { ProductsHomeComponent } from './products-home/products-home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { SearchComponent } from './search/search.component';
+import { FavListComponent } from './fav-list/fav-list.component';
 
 const routes: Routes = [
   { path: '', component: ProductsHomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
     component: ProductDetailsComponent,
   },
   { path: 'all', component: AllProductsComponent },
+  { path: 'favItems', component: FavListComponent },
   { path: 'search/:text', component: SearchComponent },
 ];
 
@@ -19,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ProductsRoutingModule {}
+export class ProductsRoutingModule { }

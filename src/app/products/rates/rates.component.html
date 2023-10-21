@@ -1,7 +1,11 @@
 <div class="card text-end" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title fw-bold">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h6 class="card-title fw-bold d-flex flex-row-reverse gap-2 align-items-center justify-content-start">
+            <button class="btn custom-bg rounded-circle" routerLink="profile">
+                <i class="bi bi-person-fill text-color"></i>
+            </button>
+            مجهول</h6>
+        <p class="card-text">منتج ممتاز للشراء</p>
         <p-rating [(ngModel)]="rateNumber" [readonly]="true" [cancel]="false"></p-rating>
     </div>
 </div>

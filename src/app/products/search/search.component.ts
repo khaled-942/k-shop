@@ -9,7 +9,7 @@ import { SearchService } from 'src/app/shared/services/search.service';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  searchProducts!: Product[];
+  searchProducts: Product[] =[];
   textRecived!: string;
   constructor(private search:SearchService, private api : ApiService) {}
   ngOnInit(): void {

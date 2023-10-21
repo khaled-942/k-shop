@@ -1,1 +1,13 @@
-<p>accout works!</p>
+<div class="container my-5">
+    <div class="card py-5 d-flex flex-column align-items-center justify-content-center gap-2">
+        <p-avatar image="../../../assets/images/user.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+        <label class="fw-bold" for="name">name:</label>
+        <input type="text" class="form-control w-75" id="name" readonly [value]="name">
+        <label class="fw-bold" for="email">email:</label>
+        <input type="text" class="form-control w-75" id="email" readonly [value]="email">
+        <label class="fw-bold" for="password">password:</label>
+        <input type="text" class="form-control w-75" id="password" readonly [value]="password">
+        <label class="fw-bold" for="address">address:</label>
+        <input type="text" class="form-control w-75" id="address" readonly [value]="address">
+    </div>
+</div>

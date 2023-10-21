@@ -17,6 +17,8 @@ import { RatesComponent } from './rates/rates.component';
 import { PipesModModule } from '../pipes/pipes-mod/pipes-mod.module';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { SearchComponent } from './search/search.component';
+import { FavListComponent } from './fav-list/fav-list.component';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 @NgModule({
     declarations: [
         ProductListComponent,
@@ -27,7 +29,8 @@ import { SearchComponent } from './search/search.component';
         PRecentViewComponent,
         RatesComponent,
         AllProductsComponent,
-        SearchComponent
+        SearchComponent,
+        FavListComponent
     ],
     imports: [
         CommonModule,
@@ -37,7 +40,11 @@ import { SearchComponent } from './search/search.component';
         DividerModule,
         PipesModModule,
         FormsModule,
+        ToggleButtonModule,
         ProductsRoutingModule,
+    ],
+    exports:[
+        ProductItemComponent,
     ]
 })
 export class ProductsModule { }

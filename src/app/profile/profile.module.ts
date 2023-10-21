@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { AccoutComponent } from './accout/accout.component';
-
+import { AvatarModule } from 'primeng/avatar';
 
 @NgModule({
   declarations: [
@@ -11,6 +11,7 @@ import { AccoutComponent } from './accout/accout.component';
   ],
   imports: [
     CommonModule,
+    AvatarModule,
     ProfileRoutingModule
   ]
 })

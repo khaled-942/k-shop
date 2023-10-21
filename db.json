@@ -3,7 +3,7 @@
         {
             "id": 1,
             "price": 90,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "title": "موبايل سامسونج",
             "imgSrc": "assets/images/samsung.png",
             "discount": 0,
             "priceAD": 0,
@@ -13,12 +13,13 @@
             "inventoryStatus": "INSTOCK",
             "category": "Electronics",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 2,
             "price": 90,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "title": "موبايل اوبو",
             "imgSrc": "assets/images/oppo.png",
             "discount": 0,
             "priceAD": 0,
@@ -28,12 +29,13 @@
             "inventoryStatus": "LOWSTOCK",
             "category": "Electronics",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 3,
             "price": 90,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "title": "تيشيرت نص آرت وير ",
             "imgSrc": "assets/images/tshirt.png",
             "discount": 0,
             "priceAD": 0,
@@ -43,12 +45,13 @@
             "inventoryStatus": "LOWSTOCK",
             "category": "Clothing",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 4,
             "price": 150,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
+            "title": "قميص كم طويل رجالى",
             "imgSrc": "assets/images/pic.png",
             "discount": 0.4,
             "priceAD": 0,
@@ -58,13 +61,14 @@
             "inventoryStatus": "INSTOCK",
             "category": "Clothing",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 5,
             "price": 150,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "imgSrc": "assets/images/pic.png",
+            "title": "تيشيرت-كم طويل-آرت وير-رجالى-ملابس",
+            "imgSrc": "assets/images/mencasual.jpg",
             "discount": 0.3,
             "priceAD": 0,
             "status": "جديد",
@@ -73,52 +77,56 @@
             "inventoryStatus": "LOWSTOCK",
             "category": "Clothing",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 6,
             "price": 150,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "imgSrc": "assets/images/pic.png",
+            "title": "هارد خارجى",
+            "imgSrc": "assets/images/wdhard.jpg",
             "discount": 0.2,
             "priceAD": 0,
             "status": "جديد",
             "rating": 1,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "inventoryStatus": "OUTSTOCK",
-            "category": "Clothing",
+            "category": "Electronics",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 7,
             "price": 150,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "imgSrc": "assets/images/pic.png",
+            "title": "قلادة ذهبية",
+            "imgSrc": "assets/images/necklace.png",
             "discount": 0.4,
             "priceAD": 0,
             "status": "جديد",
             "rating": 3,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "inventoryStatus": "LOWSTOCK",
-            "category": "Clothing",
+            "category": "Jewelries",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         },
         {
             "id": 8,
             "price": 150,
-            "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "imgSrc": "assets/images/pic.png",
+            "title": "خاتم من الذهب الابيض",
+            "imgSrc": "assets/images/whitegoldring.jpg",
             "discount": 0.8,
             "priceAD": 0,
             "status": "جديد",
             "rating": 4,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "inventoryStatus": "INSTOCK",
-            "category": "Clothing",
+            "category": "Jewelries",
             "quantity": 1,
-            "totalQMP": 0
+            "totalQMP": 0,
+            "fav": false
         }
     ]
 }

@@ -1,9 +1,9 @@
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-3" *ngIf="searchProducts.length>0 ;else noresult">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-3" *ngIf="searchProducts.length > 0 ;else noresult">
         <app-product-item *ngFor="let product of searchProducts" [passProduct]="product"></app-product-item>
     </div>
     <ng-template #noresult>
-        <div class="d-flex align-items-center justify-content-center pt-4">
+        <div class="d-flex align-items-center justify-content-center vh-100">
             <figure>
                 <img src="../../../assets/images/notfound.png" alt="" srcset="">
             </figure>

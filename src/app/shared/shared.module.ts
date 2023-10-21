@@ -19,9 +19,9 @@ import { BadgeModule } from 'primeng/badge';
     HttpClientModule,
     BadgeModule
   ],
-  exports:[
+  exports: [
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ]
 })
 export class SharedModule { }
