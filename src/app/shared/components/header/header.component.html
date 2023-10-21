@@ -10,8 +10,11 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav gap-2">
                 <li class="nav-item">
-                    <button class="btn custom-bg text-color w-mc" routerLink="cart">
+                    <button class="btn custom-bg text-color w-mc position-relative" routerLink="cart">
                         <i class="bi bi-cart-fill"></i> سله التسوق
+                        <span  class="position-absolute top-0 start-100 translate-middle badge" *ngIf="CartItems!='0'">
+                            <p-badge [value]="CartItems"></p-badge>
+                        </span>
                     </button>
                 </li>
                 <li class="nav-item">

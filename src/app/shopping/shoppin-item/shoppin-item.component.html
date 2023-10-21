@@ -1,0 +1,33 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-4 gap-4">
+  <img class="shadow img-fluid rounded py-2" [src]="itemCart.imgSrc" [alt]="itemCart.title" />
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center flex-1 gap-4 flex-grow-1">
+    <div class="d-flex flex-column align-items-center justify-content-center gap-3">
+      <h6 class="fw-bold">{{ itemCart.title }}</h6>
+      <p-rating [(ngModel)]="itemCart.rating" [readonly]="true" [cancel]="false"></p-rating>
+      <div class="d-flex align-items-center gap-3">
+        <span class="d-flex align-items-center gap-2">
+          <i class="bi bi-tag"></i>
+          <span class="fw-semibold">{{ itemCart.category }}</span>
+        </span>
+        <p-tag [value]="itemCart.inventoryStatus" [severity]="getSeverity(itemCart)"></p-tag>
+      </div>
+    </div>
+    <div class="d-flex flex-column  align-items-center gap-3">
+      <span class="fs-5 fw-semibold">price: <span dir="rtl">{{ itemCart.totalQMP | egy }}</span></span>
+      <div class="text-center">
+        <label class="mb-2 fw-bold">Quantity</label>
+        <div class="d-flex align-items-center justify-content-center">
+          <i class="bi bi-dash px-2 pointer" (click)="removeMore(itemCart.id)"></i>
+          <input type="number" class="form-control text-center" [value]="itemCart.quantity" readonly>
+          <i class="bi bi-plus px-2 pointer" (click)="addMore(itemCart.id)"></i>
+        </div>
+        <i class="bi bi-trash fs-3 text-danger mt-3 pointer" (click)="deleteItem()"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<p-divider align="left">
+  <div class="inline-flex align-items-center">
+    <i class="bi bi-cart2 mr-2"></i>
+  </div>
+</p-divider>

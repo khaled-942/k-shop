@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { TagModule } from 'primeng/tag';
 import { DividerModule } from 'primeng/divider';
 import { RatesComponent } from './rates/rates.component';
-import { EgycurrencyPipe } from './pipes/egycurrency.pipe';
+import { PipesModModule } from '../pipes/pipes-mod/pipes-mod.module';
 @NgModule({
     declarations: [
         ProductListComponent,
@@ -23,8 +23,7 @@ import { EgycurrencyPipe } from './pipes/egycurrency.pipe';
         ProductsHomeComponent,
         ProductViewComponent,
         PRecentViewComponent,
-        RatesComponent,
-        EgycurrencyPipe
+        RatesComponent
     ],
     imports: [
         CommonModule,
@@ -32,8 +31,9 @@ import { EgycurrencyPipe } from './pipes/egycurrency.pipe';
         RatingModule,
         TagModule,
         DividerModule,
+        PipesModModule,
         FormsModule,
-        ProductsRoutingModule
+        ProductsRoutingModule,
     ]
 })
 export class ProductsModule { }

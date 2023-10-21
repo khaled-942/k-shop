@@ -10,8 +10,8 @@
         <p-rating [(ngModel)]="passProduct.rating" [readonly]="true" [cancel]="false"></p-rating>
         <div class="d-flex gap-2 justify-content-end">
             <p class="card-text mb-0" dir="rtl" [ngClass]="{'text-decoration-line-through text-danger': passProduct.discount != 0}">
-                {{ passProduct.price | egycurrency }}</p>
-              <p class="card-text text-success" dir="rtl" *ngIf="passProduct.discount != 0">{{ passProduct.priceAD | egycurrency }}</p>
+                {{ passProduct.price | egy }}</p>
+              <p class="card-text text-success" dir="rtl" *ngIf="passProduct.discount != 0">{{ passProduct.priceAD | egy }}</p>
         </div>
       </div>
     </div>

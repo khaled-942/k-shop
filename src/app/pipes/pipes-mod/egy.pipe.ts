@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'egycurrency'
+  name: 'egy'
 })
-export class EgycurrencyPipe implements PipeTransform {
+export class EgyPipe implements PipeTransform {
 
   transform(value: unknown, ...args: unknown[]): unknown {
-    return `${value} ج.م`;;
+    return `${value} ج.م`;
   }
 
 }

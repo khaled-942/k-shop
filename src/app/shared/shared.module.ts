@@ -5,7 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BadgeModule } from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BadgeModule
   ],
   exports:[
     FooterComponent,

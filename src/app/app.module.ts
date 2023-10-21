@@ -18,9 +18,9 @@ import { ShoppingModule } from './shopping/shopping.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
     ProductsModule,
-    ShoppingModule
+    ShoppingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

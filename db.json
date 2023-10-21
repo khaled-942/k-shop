@@ -6,13 +6,14 @@
             "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "imgSrc": "assets/images/samsung.png",
             "discount": 0,
-            "priceAD":0,
+            "priceAD": 0,
             "status": "جديد",
             "rating": 2,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "inventoryStatus":"INSTOCK",
-            "category":"Electronics",
-            "quantity":1
+            "inventoryStatus": "INSTOCK",
+            "category": "Electronics",
+            "quantity": 1,
+            "totalQMP": 0
         },
         {
             "id": 2,
@@ -20,13 +21,14 @@
             "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "imgSrc": "assets/images/oppo.png",
             "discount": 0,
-            "priceAD":0,
+            "priceAD": 0,
             "status": "جديد",
             "rating": 3,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "inventoryStatus":"LOWSTOCK",
-            "category":"Electronics",
-            "quantity":1
+            "inventoryStatus": "LOWSTOCK",
+            "category": "Electronics",
+            "quantity": 1,
+            "totalQMP": 0
         },
         {
             "id": 3,
@@ -34,13 +36,14 @@
             "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "imgSrc": "assets/images/tshirt.png",
             "discount": 0,
-            "priceAD":0,
+            "priceAD": 0,
             "status": "جديد",
             "rating": 4,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "inventoryStatus":"LOWSTOCK",
-            "category":"Clothing",
-            "quantity":1
+            "inventoryStatus": "LOWSTOCK",
+            "category": "Clothing",
+            "quantity": 1,
+            "totalQMP": 0
         },
         {
             "id": 4,
@@ -48,13 +51,14 @@
             "title": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
             "imgSrc": "assets/images/pic.png",
             "discount": 0.4,
-            "priceAD":0,
+            "priceAD": 0,
             "status": "جديد",
             "rating": 5,
             "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
-            "inventoryStatus":"INSTOCK",
-            "category":"Clothing",
-            "quantity":1
+            "inventoryStatus": "INSTOCK",
+            "category": "Clothing",
+            "quantity": 1,
+            "totalQMP": 0
         }
     ]
 }

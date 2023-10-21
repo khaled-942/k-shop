@@ -10,5 +10,6 @@ export interface Product {
   discription: string;
   inventoryStatus: string;
   category: string;
-  quantity:number
+  quantity:number;
+  totalQMP:number;
 }

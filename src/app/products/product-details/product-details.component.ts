@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/interfaces/productInterface';
 import { ApiService } from 'src/app/shared/services/api.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 import { ShareProductDetailsService } from 'src/app/shared/services/share-product-details.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class ProductDetailsComponent implements OnInit {
   otherProducts!: Product[];
   constructor(
     private details: ShareProductDetailsService,
-    private apiServ: ApiService
+    private apiServ: ApiService,
+    private cartitems:CartService
   ) {}
   ngOnInit(): void {
     this.details.productDetailsObserv.subscribe((data: any) => {
@@ -22,5 +24,8 @@ export class ProductDetailsComponent implements OnInit {
     this.apiServ.getProducts().subscribe((data: any) => {
       this.otherProducts = data.filter((el:any) => el.id != this.product.id);
     });
+  }
+  addToCart(){
+    this.cartitems.addProductToCart(this.product);
   }
 }

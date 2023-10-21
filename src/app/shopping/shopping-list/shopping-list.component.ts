@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/interfaces/productInterface';
-import { ApiService } from 'src/app/shared/services/api.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -9,26 +9,19 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class ShoppingListComponent implements OnInit {
   products!: Product[]
-  emptyMessage: string = "Nothing IN Your Cart";
-  constructor(private apiService: ApiService) { }
+  total: number = 0
+
+  constructor(private cart: CartService) { }
   ngOnInit(): void {
-    // this.apiService.getProducts().subscribe((product: any) => {
-    //   this.products = product;
-    // })
+    this.cart.cartItemsobs.subscribe((data) => {
+      this.products = data;
+    })
+    this.cart.totalPriceobs.subscribe(data=>{this.total = data});
   }
-  getSeverity(product: Product) {
-    switch (product.inventoryStatus) {
-      case 'INSTOCK':
-        return 'success';
 
-      case 'LOWSTOCK':
-        return 'warning';
+  clearAll() {
+    this.cart.removeAll()
+  }
 
-      case 'OUTOFSTOCK':
-        return 'danger';
 
-      default:
-        return undefined;
-    }
-  };
 }

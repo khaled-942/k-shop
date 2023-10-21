@@ -12,7 +12,7 @@ export class ProductViewComponent implements OnInit {
   constructor(private apiServ: ApiService) {}
   ngOnInit(): void {
     this.apiServ.getProducts().subscribe((data: any) => {
-      this.vproducts = data.slice(0,3);
+      this.vproducts = data.slice(1,4);
     });
   }
 }
