@@ -15,6 +15,8 @@ import { TagModule } from 'primeng/tag';
 import { DividerModule } from 'primeng/divider';
 import { RatesComponent } from './rates/rates.component';
 import { PipesModModule } from '../pipes/pipes-mod/pipes-mod.module';
+import { AllProductsComponent } from './all-products/all-products.component';
+import { SearchComponent } from './search/search.component';
 @NgModule({
     declarations: [
         ProductListComponent,
@@ -23,7 +25,9 @@ import { PipesModModule } from '../pipes/pipes-mod/pipes-mod.module';
         ProductsHomeComponent,
         ProductViewComponent,
         PRecentViewComponent,
-        RatesComponent
+        RatesComponent,
+        AllProductsComponent,
+        SearchComponent
     ],
     imports: [
         CommonModule,

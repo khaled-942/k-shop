@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="d-flex">
+        <app-log-in class="flex-fill"></app-log-in>
+        <div class="my-2">
+            <p-divider layout="vertical"><b>OR</b></p-divider>
+        </div>
+        <!-- <app-sign-up class="flex-fill"></app-sign-up> -->
+        <div class="d-flex flex-column align-items-center justify-content-center gaop-3 flex-fill">
+            <figure>
+                <img src="../../assets/images/logo.svg" alt="" srcset="">
+            </figure>
+            <button class="btn custom-btn w-mc mb-3"(click)="toNavigate('/Sign-Up')">Sign Up</button>
+        </div>
+    </div>
+    <div class="text-center">
+        <p-divider align="center">
+            <div class="inline-flex align-items-center">
+                <i class="bi bi-person-workspace me-2"></i>
+                <b>Discover</b>
+            </div>
+        </p-divider>
+        <button class="btn custom-btn w-mc mb-3" (click)="toNavigate('/Products')">Continue As Gest</button>
+    </div>
+</div>

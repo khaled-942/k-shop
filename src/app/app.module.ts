@@ -8,19 +8,24 @@ import { ProductsModule } from './products/products.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ShoppingModule } from './shopping/shopping.module';
-
+import { DiscoverComponent } from './discover/discover.component';
+import { DividerModule } from 'primeng/divider';
+import { AuthenticationModule } from './authentication/authentication.module';
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
     ContactUsComponent,
+    DiscoverComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ProductsModule,
     ShoppingModule,
-    SharedModule
+    SharedModule,
+    DividerModule,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

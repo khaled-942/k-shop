@@ -9,4 +9,7 @@ export class ApiService {
   getProducts(){
     return this.http.get('http://localhost:3000/products');
   }
+  filterByName(categore:string){
+    return this.http.get(`http://localhost:3000/products?title_like=${categore}`)
+  }
 }

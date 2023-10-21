@@ -16,7 +16,7 @@ export class ProductItemComponent implements OnInit {
   }
   @Input() passProduct!: Product;
   ngOnInit(): void {
-    this.passProduct.priceAD = this.passProduct.price * (1 - this.passProduct.discount)
+    this.passProduct.priceAD = Math.ceil(this.passProduct.price * (1 - this.passProduct.discount)) 
   }
   addToCart(){
     this.cart.addProductToCart(this.passProduct);

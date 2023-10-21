@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/shared/interfaces/productInterface';
 import { ApiService } from 'src/app/shared/services/api.service';
 
@@ -9,10 +10,13 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class ProductListComponent implements OnInit {
   products!: Product[];
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private route :Router) {}
   ngOnInit(): void {
-    this.apiService.getProducts().subscribe((product:any)=>{
-      this.products = product;
-    })
+    this.apiService.getProducts().subscribe((product: any) => {
+      this.products = product.slice(0, 4);
+    });
+  }
+  showAll(){
+    this.route.navigate(['/Products/all'])
   }
 }

@@ -3,7 +3,7 @@ import { Product } from '../interfaces/productInterface';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
   cartItems = new BehaviorSubject<Product[]>([]);
@@ -11,17 +11,16 @@ export class CartService {
   totalPrice = new BehaviorSubject<number>(0);
   totalPriceobs = this.totalPrice.asObservable();
   arr: Product[] = [];
-  checkItemInCart!: number
-  constructor() { }
+  checkItemInCart!: number;
+  constructor() {}
 
   addProductToCart(productAdded: Product) {
     this.checkItemInCart = this.arr.findIndex(
       (item: Product) => item.id == productAdded.id
-    )
+    );
     if (this.arr.length === 0) {
       this.arr.push(productAdded);
-    }
-    else {
+    } else {
       if (this.checkItemInCart === -1) {
         this.arr.push(productAdded);
       }
@@ -31,7 +30,7 @@ export class CartService {
   }
 
   calcTotal(data: Product) {
-    data.totalQMP = (1 - data.discount) * data.quantity * data.price
+    data.totalQMP = (1 - data.discount) * data.quantity * data.price;
     return data.totalQMP;
   }
 
@@ -41,7 +40,7 @@ export class CartService {
         data.quantity += 1;
         this.calcTotal(data);
       }
-    })
+    });
     this.getTotalAmount();
   }
 
@@ -51,7 +50,7 @@ export class CartService {
         data.quantity -= 1;
         this.calcTotal(data);
       }
-    })
+    });
     this.getTotalAmount();
   }
 
@@ -60,6 +59,7 @@ export class CartService {
       if (cartItem.id === pro.id) {
         this.arr.splice(index, 1);
         this.cartItems.next(this.arr);
+        this.getTotalAmount();
       }
     });
   }
@@ -72,9 +72,9 @@ export class CartService {
   getTotalAmount() {
     let total = 0;
     this.arr.map((product: Product) => {
+      this.calcTotal(product);
       total += product.totalQMP;
     });
-    this.totalPrice.next(total)
+    this.totalPrice.next(total);
   }
-
 }

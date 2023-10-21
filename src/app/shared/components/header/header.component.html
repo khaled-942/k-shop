@@ -25,12 +25,13 @@
             </ul>
 
             <nav class="navbar w-100">
-                <form class="container-fluid">
+                <div class="container-fluid">
                     <div class="input-group w-100">
                         <input type="text" class="form-control rounded-pill custom-bg text-color" placeholder='عم تبحث ؟'
-                            aria-label="Username" aria-describedby="basic-addon1">
+                            aria-label="Username" aria-describedby="basic-addon1" (keyup)="setText($event)">
+                            <!-- <i class="bi bi-search"></i> -->
                     </div>
-                </form>
+                </div>
             </nav>
         </div>
     </div>
