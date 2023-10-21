@@ -11,10 +11,8 @@ export class FavListComponent implements OnInit {
   favItems: Product[] = []
   constructor(private fav: FavService) { }
   ngOnInit(): void {
-    console.log(this.favItems)
     this.fav.favItemsobs.subscribe((item) => {
       this.favItems = item
-      console.log(this.favItems)
     })
   }
 }

@@ -1,6 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-import { ApiService } from '../../services/api.service';
 import { SearchService } from '../../services/search.service';
 import { Router } from '@angular/router';
 

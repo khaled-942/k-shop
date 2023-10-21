@@ -14,7 +14,6 @@ export class SearchComponent implements OnInit {
   constructor(private search:SearchService, private api : ApiService) {}
   ngOnInit(): void {
     this.search.searchTextobserv.subscribe((text)=>{
-      console.log(text)
       this.textRecived = text;
       this.api.filterByName(this.textRecived).subscribe((data:any)=>{
         this.searchProducts = data

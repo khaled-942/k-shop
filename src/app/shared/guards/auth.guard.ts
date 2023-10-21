@@ -13,7 +13,8 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   }
   else{
-    alert('You should Log-In to view Profile')
+    alert('You should Log-In to view Profile');
+    router.navigate(['/login'])
     return false;
   }
 };

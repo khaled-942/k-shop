@@ -9,6 +9,7 @@ import { authGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: DiscoverComponent },
+  { path: 'login', component: DiscoverComponent },
   { path: 'Products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   { path: 'contact', component: ContactUsComponent },
   { path: 'aboutUs', component: AboutUsComponent },
