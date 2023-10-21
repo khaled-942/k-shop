@@ -1,3 +1,4 @@
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,12 +12,15 @@ import { ShoppingModule } from './shopping/shopping.module';
 import { DiscoverComponent } from './discover/discover.component';
 import { DividerModule } from 'primeng/divider';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { LoaderComponent } from './loader/loader.component';
+import { RequestsInterceptor } from './requests.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
     ContactUsComponent,
     DiscoverComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,13 @@ import { AuthenticationModule } from './authentication/authentication.module';
     DividerModule,
     AuthenticationModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:RequestsInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
