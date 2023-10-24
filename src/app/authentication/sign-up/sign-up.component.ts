@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/shared/services/account.service';
+import { LoaderService } from 'src/app/shared/services/loader.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,8 +11,9 @@ import { AccountService } from 'src/app/shared/services/account.service';
 })
 export class SignUpComponent implements OnInit {
   signUpForm: FormGroup | any
-  constructor(private fb: FormBuilder, private route: Router, private account:AccountService) { }
+  constructor(private fb: FormBuilder, private route: Router, private account:AccountService,private loaderSer:LoaderService) { }
   ngOnInit(): void {
+    this.loaderSer.toggleStauts(false)
     this.signUpForm = this.fb.group({
       name: [null, [Validators.required]],
       email: [null, [Validators.required,Validators.pattern(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)]],
