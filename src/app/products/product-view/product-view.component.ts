@@ -9,10 +9,17 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class ProductViewComponent implements OnInit {
   vproducts!: Product[];
+  shownArrany: any = [];
   constructor(private apiServ: ApiService) {}
   ngOnInit(): void {
+    this.apiServ.viewedIdsobs.subscribe((data) => {
+      this.shownArrany = data;
+    });
     this.apiServ.getProducts().subscribe((data: any) => {
-      this.vproducts = data.slice(1,4);
+      this.vproducts = data
+        .filter((item: any) => !this.shownArrany.includes(item.id))
+        .slice(0, 3);
+      console.log(this.vproducts);
     });
   }
 }

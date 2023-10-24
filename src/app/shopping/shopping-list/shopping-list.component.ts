@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/shared/interfaces/productInterface';
 import { CartService } from 'src/app/shared/services/cart.service';
+import { LoaderService } from 'src/app/shared/services/loader.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -11,8 +12,9 @@ export class ShoppingListComponent implements OnInit {
   products!: Product[]
   total: number = 0
 
-  constructor(private cart: CartService) { }
+  constructor(private cart: CartService,private loaderSer:LoaderService) { }
   ngOnInit(): void {
+    this.loaderSer.toggleStauts(false)
     this.cart.cartItemsobs.subscribe((data) => {
       this.products = data;
     })
