@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/productInterface';
 import { BehaviorSubject } from 'rxjs';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,11 @@ export class FavService {
   favItemsobs = this.favItems.asObservable();
   favarr: Product[] = [];
   checkItemInCart!: number;
-  constructor() { }
+  constructor(private api:ApiService) {
+    this.api.getProducts().subscribe((data:any)=>{
+      this.favItems.next(data.filter((item:any)=>item.fav === true))
+    })
+  }
   addProductToFav(productAdded: Product) {
     this.checkItemInCart = this.favarr.findIndex(
       (item: Product) => item.id == productAdded.id

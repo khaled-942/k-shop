@@ -5,6 +5,7 @@ import { ShareProductDetailsService } from 'src/app/shared/services/share-produc
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/shared/services/cart.service';
 import { FavService } from 'src/app/shared/services/fav.service';
+import { ApiService } from 'src/app/shared/services/api.service';
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -13,6 +14,7 @@ import { FavService } from 'src/app/shared/services/fav.service';
 export class ProductItemComponent implements OnInit {
   constructor(config: NgbRatingConfig, private productDetails: ShareProductDetailsService,
     private route: Router, private cart: CartService,
+    private api: ApiService,
     private fav: FavService) {
     config.max = 5;
     config.readonly = true;
@@ -29,7 +31,12 @@ export class ProductItemComponent implements OnInit {
     this.route.navigate([`/Products/item/${this.passProduct.id}`])
   }
   addtoFav() {
+    this.passProduct.fav=! this.passProduct.fav;
+    this.api.updatefav(this.passProduct, this.passProduct.id).subscribe(
+      (response)=>console.log(response),
+      (error)=>console.log(error),
+      ()=>console.log("done patching"),
+    )
     this.fav.addProductToFav(this.passProduct);
-    this.passProduct.fav = !this.passProduct.fav
   }
 }
