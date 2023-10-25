@@ -10,7 +10,10 @@ export class AccountService {
 
 
   logedIn = new BehaviorSubject<boolean>(false);
-  logedInObs = this.logedIn.asObservable()
+  logedInObs = this.logedIn.asObservable();
+
+  alertLogedIn = new BehaviorSubject<boolean>(false);
+  alertLogedInObs = this.alertLogedIn.asObservable()
   constructor() { }
 
   passInformation(arr: {}) {

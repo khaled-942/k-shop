@@ -8,8 +8,13 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   cartItems = new BehaviorSubject<Product[]>([]);
   cartItemsobs = this.cartItems.asObservable();
+
   totalPrice = new BehaviorSubject<number>(0);
   totalPriceobs = this.totalPrice.asObservable();
+
+  orderPlaced = new BehaviorSubject<boolean>(false);
+  orderPlacedObs = this.orderPlaced.asObservable();
+
   arr: Product[] = [];
   checkItemInCart!: number;
   constructor() {}

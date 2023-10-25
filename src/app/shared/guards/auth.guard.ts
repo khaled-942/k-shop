@@ -4,7 +4,6 @@ import { AccountService } from '../services/account.service';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const loginService = inject(AccountService);
-  const router = inject(Router);
   let status: boolean = false;
   loginService.logedInObs.subscribe((data)=>{
     status = data
@@ -13,8 +12,7 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   }
   else{
-    alert('You should Log-In to view Profile');
-    router.navigate(['/login'])
+    loginService.alertLogedIn.next(true)
     return false;
   }
 };

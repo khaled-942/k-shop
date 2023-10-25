@@ -1,0 +1,10 @@
+<div class="position-sticky d-flex flex-coulmn top-10">
+    <div class="position-absolute">
+        <div class="alert alert-success  pointer" role="alert" *ngIf="ifOrder" (click)="forOrder()">
+            Your order placed successfully
+        </div>
+        <div class="alert alert-warning pointer" role="alert" *ngIf="logIn" (click)="toLogIn()">
+            You should log-in first, tab to logIn
+        </div>
+    </div>
+</div>
