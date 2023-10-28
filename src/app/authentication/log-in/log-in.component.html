@@ -22,5 +22,7 @@
       </div>
     </div>
     <button type="submit" class="btn custom-btn w-100" [disabled]="login.invalid">Log In</button>
+    <div><small *ngIf="validPass" class="text-danger">Password is incorrect</small></div>
+    <div><small *ngIf="user" class="text-danger">There is no account for this E-mail</small></div>
   </form>
 </div>

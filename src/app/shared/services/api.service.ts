@@ -12,8 +12,9 @@ export class ApiService {
   getProducts(){
     return this.http.get('http://localhost:3000/products');
   }
-  updatefav(user:Product,id:number){
-    return this.http.patch<any>(`http://localhost:3000/products/${id}`,user);
+
+  updatefav(fav:Product,id:number){
+    return this.http.patch<any>(`http://localhost:3000/products/${id}`,fav);
   }
   
   filterByName(categore:string){

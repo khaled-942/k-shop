@@ -128,5 +128,36 @@
       "totalQMP": 0,
       "fav": false
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "khaled Mohamed",
+      "email": "khaledmohamed942@gmail.com",
+      "uname": "khaled942",
+      "password": "kh@ledA1",
+      "address": "Alexandria",
+      "userImg": "../../assets/images/me.jpg"
+    },
+    {
+      "id": 2,
+      "name": "khaled",
+      "email": "khaledmohamed92@gmail.com",
+      "uname": "khaled942",
+      "password": "kh@ledA2",
+      "address": "Alexandria1",
+      "userImg": "../../assets/images/me.jpg"
+    },
+    {
+      "name": "Khaled 3",
+      "email": "khaledmohamed2@gmail.com",
+      "uname": "khaled 3",
+      "password": "kh@ledA3",
+      "address": [
+        "Elmndra abdel halem Mahmoud st",
+        "alexandria"
+      ],
+      "id": 3
+    }
   ]
 }

@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="cont" formArrayName="formArrayAddress">
+        <div class="cont" formArrayName="address">
           <div class="cont1" *ngFor="let oneAddress of adds.controls; let i = index">
             <div class="mb-3 parentAdd">
               <label for="exampleInputPassword1" *ngIf="i == 0 ; else another" class="form-label">Address</label>
@@ -74,6 +74,7 @@
           </div>
         </div>
         <button type="submit" class="btn custom-btn w-100 my-2" [disabled]="signUpForm.invalid">Create Account</button>
+        <div><small class="text-danger" *ngIf="dpEmail">This E-mail is Already used</small></div>
       </form>
     </div>
   </div>
