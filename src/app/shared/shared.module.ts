@@ -6,12 +6,14 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BadgeModule } from 'primeng/badge';
+import { AlertsComponent } from './components/alerts/alerts.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
     NotFoundComponent,
+    AlertsComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { BadgeModule } from 'primeng/badge';
   exports: [
     FooterComponent,
     HeaderComponent,
+    AlertsComponent
   ]
 })
 export class SharedModule { }

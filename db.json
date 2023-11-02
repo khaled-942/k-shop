@@ -70,7 +70,7 @@
       "title": "تيشيرت-كم طويل-آرت وير-رجالى-ملابس",
       "imgSrc": "assets/images/mencasual.jpg",
       "discount": 0.3,
-      "priceAD": 0,
+      "priceAD": 105,
       "status": "جديد",
       "rating": 0,
       "discription": "تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس تيشيرت-كم طويل-آرت وير-نسائي-ملابس",
@@ -127,6 +127,37 @@
       "quantity": 1,
       "totalQMP": 0,
       "fav": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "khaled Mohamed",
+      "email": "khaledmohamed942@gmail.com",
+      "uname": "khaled942",
+      "password": "kh@ledA1",
+      "address": "Alexandria",
+      "userImg": "../../assets/images/me.jpg"
+    },
+    {
+      "id": 2,
+      "name": "khaled",
+      "email": "khaledmohamed92@gmail.com",
+      "uname": "khaled942",
+      "password": "kh@ledA2",
+      "address": "Alexandria1",
+      "userImg": "../../assets/images/me.jpg"
+    },
+    {
+      "name": "Khaled 3",
+      "email": "khaledmohamed2@gmail.com",
+      "uname": "khaled 3",
+      "password": "kh@ledA3",
+      "address": [
+        "Elmndra abdel halem Mahmoud st",
+        "alexandria"
+      ],
+      "id": 3
     }
   ]
 }

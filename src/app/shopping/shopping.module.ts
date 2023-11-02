@@ -21,7 +21,7 @@ import { PipesModModule } from '../pipes/pipes-mod/pipes-mod.module';
     TagModule,
     DividerModule,
     PipesModModule,
-    ShoppingRoutingModule
+    ShoppingRoutingModule,
   ]
 })
 export class ShoppingModule { }
