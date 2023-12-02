@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { AccountService } from 'src/app/shared/services/account.service';
 import { LoaderService } from 'src/app/shared/services/loader.service';
 
@@ -19,12 +20,13 @@ export class SignUpComponent implements OnInit {
   signUpForm: FormGroup | any;
   checkFound!: number;
   dpEmail: boolean = false;
+  forbbidenUserNames = ['khaled', 'ali']
   constructor(
     private fb: FormBuilder,
     private route: Router,
     private account: AccountService,
     private loaderSer: LoaderService
-  ) {}
+  ) { }
   ngOnInit(): void {
     this.loaderSer.toggleStauts(false);
     this.signUpForm = this.fb.group({
@@ -37,8 +39,9 @@ export class SignUpComponent implements OnInit {
             /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
           ),
         ],
+        this.forbbidenEmails
       ],
-      uname: [null, [Validators.required]],
+      uname: [null, [Validators.required, this.forbbiden.bind(this)]],
       password: [
         null,
         [
@@ -88,5 +91,26 @@ export class SignUpComponent implements OnInit {
 
   loginNavigate() {
     this.route.navigate(['']);
+  }
+
+  forbbiden(control: FormControl): { [str: string]: boolean } | null {
+    if (this.forbbidenUserNames.indexOf(control.value) != -1) {
+      return { 'forbbiden': true }
+    }
+    else {
+      return null
+    }
+  }
+
+  forbbidenEmails(control: FormControl): Promise<any> | Observable<any> {
+    const promise = new Promise<any>((resolve, reject) => {
+      setTimeout(() => {
+        if(control.value ==="test@test.com"){
+          resolve({'forbbidenEmail':true})
+        }
+        else resolve(null)
+      }, 1500);
+    })
+    return promise
   }
 }
